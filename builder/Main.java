@@ -2,18 +2,42 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Computador gamer = new ComputadorBuilder()
-                .processador("Intel i9")
-                .memoriaRam(32)
-                .armazenamento(2000)
-                .placaVideo("RTX 5090")
-                .sistemaOperacional("Windows 11")
-                .monitor(true)
-                .teclado(true)
-                .mouse(true)
+    Pizza calabresa = new PizzaBuilder()
+        .size("Grande")
+        .dough("Tradicional")
+        .sauce("Tomate")
+        .cheese(true)
+        .pepperoni(true)
+        .onion(true)
+        .stuffedCrust(false)
+        .build();
+
+    Pizza portuguesa = new PizzaBuilder()
+        .size("Média")
+        .dough("Tradicional")
+        .sauce("Tomate")
+        .cheese(true)
+        .bacon(true)
+        .chicken(true)
+        .corn(true)
+        .onion(true)
+        .tomato(true)
+        .olive(true)
+        .stuffedCrust(true)
+        .build();
+
+    Pizza personalizada = new PizzaBuilder()
+        .size("Pequena")
+        .dough("Fina")
+        .sauce("Chocolate")
+        .chocolate(true)
+        .strawberry(true)
+        .condensedMilk(true)
                 .build();
 
-        System.out.println(gamer);
+    System.out.println(calabresa);
+    System.out.println(portuguesa);
+    System.out.println(personalizada);
     }
 
 }
